@@ -101,8 +101,7 @@ public class Run_Configuration {
 			System.out.println("OI Change Value column added"); 
 		}
 		Thread.sleep(2000);
-		File file_image = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(file_image, new File("screenshot.jpg"));
+		
 	}
 	
 	public String getDate() {

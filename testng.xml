@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="GetOI">
-  <test name="First Test">
+<suite name="SensiBullOIDetails">
+  <test name="GetOIData">
   	<classes>
-  		<class name="SensiBullOIData">
-  			<methods>
-  				<include name="GetSensiBullOIData"/>
-  			</methods>
-  		</class>
+  		<class name="com.testcases.SensiBullOIData"/>
   	</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

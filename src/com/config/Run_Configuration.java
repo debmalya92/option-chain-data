@@ -114,7 +114,7 @@ public class Run_Configuration {
 	
 	public String getTime() {
 		String s_time="";
-		SimpleDateFormat t_formatter = new SimpleDateFormat("hh-mm");
+		SimpleDateFormat t_formatter = new SimpleDateFormat("hh-mm aa");
 		s_time = t_formatter.format(new Date());
 		return s_time;
 	}
@@ -166,10 +166,10 @@ public class Run_Configuration {
 		for(File im: images) {
 			FileInputStream fin = new FileInputStream(im);
 			
-			String str_time = FilenameUtils.removeExtension(im.getName()).replace("-", ":")+" AM";
+			String str_time = FilenameUtils.removeExtension(im.getName()).replace("-", ":");
 			run.setBold(true);
 			run.setFontSize(16);
-			run.setText(str_time);
+			run.setText(str_time.toUpperCase());
 			
 			//Adding the picture in the doc
 			run.addPicture(fin, XWPFDocument.PICTURE_TYPE_JPEG, im.getName(),Units.toEMU(width), Units.toEMU(height));

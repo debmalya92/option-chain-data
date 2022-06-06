@@ -6,6 +6,7 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -100,6 +101,14 @@ public class Run_Configuration {
 			System.out.println("OI Change Value column added"); 
 		}
 		Thread.sleep(2000);
+		
+		//handling "See Trades" popup
+		By btn_seeTrade_close = By.xpath("//div[@class='summary']/following-sibling::div/button");
+		List<WebElement> element = driver.findElements(btn_seeTrade_close);
+		if(!element.isEmpty()) {
+			element.get(0).click();
+			System.out.println("See Trade popup closed"); 
+		}
 		
 	}
 	

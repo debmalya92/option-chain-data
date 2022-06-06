@@ -60,8 +60,6 @@ public class Run_Configuration {
 		System.out.println("[ Analyze ] clicked");
 
 		//Click on Option Change option
-		//div[contains(text(),'Tools to predict direction')]/following-sibling::li/a[1]
-		//a[@href='/option-chain']
 		By btn_option_chain = By.xpath("//a[@href='/option-chain']");
 		//wait.until(ExpectedConditions.elementToBeClickable(btn_option_change));
 		driver.findElements(btn_option_chain).get(1).click();
@@ -148,6 +146,9 @@ public class Run_Configuration {
 
 		// Step 3: Creating a File output stream of word
 		File doc_file = new File(getDate()+".docx");
+		if(doc_file.exists()) {
+			doc_file.delete();
+		}
 		doc_file.createNewFile();
 		FileOutputStream fout = new FileOutputStream(doc_file, true);
 
